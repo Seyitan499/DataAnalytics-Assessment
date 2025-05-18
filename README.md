@@ -63,10 +63,7 @@
   - `tenure_months` using `TIMESTAMPDIFF`.
   - `total_transactions` using `COUNT`.
   - `total_transaction_value` using `SUM(confirmed_amount)`.
-- Applied the given formula:
-
-  ```sql(this was gotten after a number of calculations has beeen done based off the data we have and embedding profit logic)
-  CLV = ((total_transaction_value * 0.001) / tenure_months) * 12
+- Applied the correct formula after using the right logic
 
 **Challenges:**
 I initially misapplied the formula by mixing up transaction count and values count for the calculation of the CLV , as well as the profit logic but i was able to balance accuracy with readability by embedding profit logic directly.
